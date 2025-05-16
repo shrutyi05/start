@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shruti Srivastava | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      animation: fadeIn 2s ease-in-out;
+      background-color: #0f172a;
+      color: #f8fafc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .animate-slide {
+      animation: slideIn 1s ease forwards;
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateY(-30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .animate-fade {
+      animation: fadeUp 1.5s ease-in-out;
+    }
+
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .glow {
+      animation: glowEffect 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glowEffect {
+      from { box-shadow: 0 0 5px #9333ea; }
+      to { box-shadow: 0 0 20px #9333ea, 0 0 30px #9333ea; }
+    }
+
+    .card-hover {
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .card-hover:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(147, 51, 234, 0.4);
+    }
+  </style>
+  <script>
+    function toggleCertificates() {
+      const section = document.getElementById('certificates-section');
+      section.classList.toggle('hidden');
+    }
+
+    function toggleSkills() {
+      const section = document.getElementById('skills-section');
+      section.classList.toggle('hidden');
+    }
+
+    function toggleCertificateGallery() {
+      const section = document.getElementById('certificate-gallery');
+      section.classList.toggle('hidden');
+    }
+  </script>
+</head>
+
+<body class="text-gray-100 min-h-screen p-8">
+  <div class="max-w-3xl mx-auto text-center animate-slide">
+    <img src="98e04e42-ecf4-4f22-899a-b0c1b4aef025.jpg" alt="Shruti Srivastava" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg glow">
+    <h1 class="text-4xl font-bold mt-4 text-purple-400 animate-fade glow">Shruti Srivastava</h1>
+    <p class="text-lg mt-2 text-gray-300 animate-fade">Aspiring Full Stack Developer | Passionate about building impactful web experiences</p>
+
+    <div class="mt-4 space-x-4 animate-fade">
+      <a href="mailto:shruti0573@gmail.com" class="text-blue-400 hover:underline">shruti0573@gmail.com</a>
+      <a href="https://www.linkedin.com/in/shruti-srivastava-62b14b289" target="_blank" class="text-blue-400 hover:underline">LinkedIn</a>
+      <a href="https://github.com/shrutyi05/Shrutyi.git" target="_blank" class="text-blue-400 hover:underline">GitHub</a>
+      <button onclick="toggleCertificates()" class="text-blue-400 hover:underline">View Certificates</button>
+      <button onclick="toggleSkills()" class="text-blue-400 hover:underline">View Skills</button>
+      <button onclick="toggleCertificateGallery()" class="text-blue-400 hover:underline">Certificates</button>
+    </div>
+  </div>
+
+  <section id="certificates-section" class="max-w-4xl mx-auto mt-6 animate-slide hidden">
+    <h2 class="text-2xl font-semibold text-purple-300 mb-4">Certificates</h2>
+    <iframe src="https://drive.google.com/embeddedfolderview?id=1Ajq_Td63vGcf0OrcN8OqOQK6ogHHkYv5#grid" style="width:100%; height:500px; border: none;"></iframe>
+  </section>
+
+  <section id="skills-section" class="max-w-4xl mx-auto mt-12 animate-slide hidden">
+    <h2 class="text-2xl font-semibold text-purple-300 mb-4">Skills</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
+      <div class="p-2 bg-gray-800 shadow rounded-md card-hover flex items-center gap-2"><img src="https://img.icons8.com/color/48/html-5--v1.png" class="w-5 h-5">HTML5</div>
+      <div class="p-2 bg-gray-800 shadow rounded-md card-hover flex items-center gap-2"><img src="https://img.icons8.com/color/48/css3.png" class="w-5 h-5">CSS3</div>
+      <div class="p-2 bg-gray-800 shadow rounded-md card-hover flex items-center gap-2"><img src="https://img.icons8.com/color/48/javascript--v1.png" class="w-5 h-5">JavaScript</div>
+      <div class="p-2 bg-gray-800 shadow rounded-md card-hover flex items-center gap-2"><img src="https://img.icons8.com/ultraviolet/40/react--v1.png" class="w-5 h-5">React.js</div>
+      <div class="p-2 bg-gray-800 shadow rounded-md card-hover flex items-center gap-2"><img src="https://img.icons8.com/fluency/48/node-js.png" class="w-5 h-5">Node.js</div>
+      <div class="p-2 bg-gray-800 shadow rounded-md card-hover flex items-center gap-2"><img src="https://img.icons8.com/color/48/mongodb.png" class="w-5 h-5">MongoDB</div>
+      <div class="p-2 bg-gray-800 shadow rounded-md card-hover flex items-center gap-2"><img src="https://img.icons8.com/ios-filled/50/express-js.png" class="w-5 h-5">Express.js</div>
+      <div class="p-2 bg-gray-800 shadow rounded-md card-hover flex items-center gap-2"><img src="https://img.icons8.com/color/48/git.png" class="w-5 h-5">Git & GitHub</div>
+      <div class="p-2 bg-gray-800 shadow rounded-md card-hover flex items-center gap-2"><img src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" class="w-5 h-5">Java</div>
+      <div class="p-2 bg-gray-800 shadow rounded-md card-hover flex items-center gap-2"><img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-dsa-data-structure-and-algorithm-with-gear-logo-color-tal-revivo.png" class="w-5 h-5">DSA</div>
+      <div class="p-2 bg-gray-800 shadow rounded-md card-hover flex items-center gap-2"><img src="https://img.icons8.com/color/48/tailwind_css.png" class="w-5 h-5">Tailwind CSS</div>
+    </div>
+  </section>
+
+  <section id="certificate-gallery" class="max-w-4xl mx-auto mt-12 animate-slide hidden">
+    <h2 class="text-2xl font-semibold text-purple-300 mb-4">Certificate Gallery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="cert1.jpg" alt="Certificate 1" class="rounded-lg shadow-md">
+      <img src="cert2.jpg" alt="Certificate 2" class="rounded-lg shadow-md">
+      <img src="cert3.jpg" alt="Certificate 3" class="rounded-lg shadow-md">
+      <!-- Add more certificate images as needed -->
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto mt-12 animate-slide">
+    <h2 class="text-2xl font-semibold text-purple-300 mb-4">Achievements and Awards</h2>
+    <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+      <h3 class="text-lg font-semibold text-purple-200">United Institute of Technology - Prayagraj, India</h3>
+      <p class="text-sm text-gray-300">December, 2023</p>
+      <ul class="list-disc list-inside mt-2 text-sm text-gray-200">
+        <li>Awarded among the top 15 coders in a coding competition held at the campus, Nov 2023.</li>
+      </ul>
+    </div>
+    <div class="bg-gray-800 p-4 rounded-lg shadow-md mt-4">
+      <h3 class="text-lg font-semibold text-purple-200">Google Girls Hackathon 2025 - Remote</h3>
+      <p class="text-sm text-gray-300">February, 2025</p>
+      <ul class="list-disc list-inside mt-2 text-sm text-gray-200">
+        <li>Shortlisted among 26000+ participants across India. Engaged in problem-solving, coding, and online sessions while gaining valuable insights from industry experts.</li>
+      </ul>
+    </div>
+  </section>
+
+</body>
+
+</html>
